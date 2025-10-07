@@ -1,7 +1,7 @@
 [![Swift Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fcryptomator%2Fcloud-access-swift%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/cryptomator/cloud-access-swift)
 [![Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fcryptomator%2Fcloud-access-swift%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/cryptomator/cloud-access-swift)
-[![Codacy Code Quality](https://app.codacy.com/project/badge/Grade/35951085e6604f9aaab998fc65dd2467)](https://www.codacy.com/gh/cryptomator/cloud-access-swift/dashboard)
-[![Codacy Coverage](https://app.codacy.com/project/badge/Coverage/35951085e6604f9aaab998fc65dd2467)](https://www.codacy.com/gh/cryptomator/cloud-access-swift/dashboard)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cryptomator_cloud-access-swift&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cryptomator_cloud-access-swift)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=cryptomator_cloud-access-swift&metric=coverage)](https://sonarcloud.io/summary/new_code?id=cryptomator_cloud-access-swift)
 
 # Cloud Access Swift
 
