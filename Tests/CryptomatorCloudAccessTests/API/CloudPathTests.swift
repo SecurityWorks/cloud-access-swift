@@ -16,35 +16,35 @@ import XCTest
 
 class CloudPathTests: XCTestCase {
 	func testURLInitWithCloudPathRelativeToBase() {
-		XCTAssertEqual("///foo/bar", URL(cloudPath: CloudPath("/bar/"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
-		XCTAssertEqual("///foo/bar", URL(cloudPath: CloudPath("/bar"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
-		XCTAssertEqual("///foo/bar", URL(cloudPath: CloudPath("bar/"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
-		XCTAssertEqual("///foo/bar", URL(cloudPath: CloudPath("bar"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
+		XCTAssertEqual("/foo/bar", URL(cloudPath: CloudPath("/bar/"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
+		XCTAssertEqual("/foo/bar", URL(cloudPath: CloudPath("/bar"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
+		XCTAssertEqual("/foo/bar", URL(cloudPath: CloudPath("bar/"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
+		XCTAssertEqual("/foo/bar", URL(cloudPath: CloudPath("bar"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
 
-		XCTAssertEqual("///bar", URL(cloudPath: CloudPath("/bar/"), relativeTo: URL(string: "/foo")!)!.absoluteString)
-		XCTAssertEqual("///bar", URL(cloudPath: CloudPath("/bar"), relativeTo: URL(string: "/foo")!)!.absoluteString)
-		XCTAssertEqual("///bar", URL(cloudPath: CloudPath("bar/"), relativeTo: URL(string: "/foo")!)!.absoluteString)
-		XCTAssertEqual("///bar", URL(cloudPath: CloudPath("bar"), relativeTo: URL(string: "/foo")!)!.absoluteString)
+		XCTAssertEqual("/bar", URL(cloudPath: CloudPath("/bar/"), relativeTo: URL(string: "/foo")!)!.absoluteString)
+		XCTAssertEqual("/bar", URL(cloudPath: CloudPath("/bar"), relativeTo: URL(string: "/foo")!)!.absoluteString)
+		XCTAssertEqual("/bar", URL(cloudPath: CloudPath("bar/"), relativeTo: URL(string: "/foo")!)!.absoluteString)
+		XCTAssertEqual("/bar", URL(cloudPath: CloudPath("bar"), relativeTo: URL(string: "/foo")!)!.absoluteString)
 
-		XCTAssertEqual("//foo/bar", URL(cloudPath: CloudPath("/bar/"), relativeTo: URL(string: "foo/")!)!.absoluteString)
-		XCTAssertEqual("//foo/bar", URL(cloudPath: CloudPath("/bar"), relativeTo: URL(string: "foo/")!)!.absoluteString)
-		XCTAssertEqual("//foo/bar", URL(cloudPath: CloudPath("bar/"), relativeTo: URL(string: "foo/")!)!.absoluteString)
-		XCTAssertEqual("//foo/bar", URL(cloudPath: CloudPath("bar"), relativeTo: URL(string: "foo/")!)!.absoluteString)
+		XCTAssertEqual("foo/bar", URL(cloudPath: CloudPath("/bar/"), relativeTo: URL(string: "foo/")!)!.absoluteString)
+		XCTAssertEqual("foo/bar", URL(cloudPath: CloudPath("/bar"), relativeTo: URL(string: "foo/")!)!.absoluteString)
+		XCTAssertEqual("foo/bar", URL(cloudPath: CloudPath("bar/"), relativeTo: URL(string: "foo/")!)!.absoluteString)
+		XCTAssertEqual("foo/bar", URL(cloudPath: CloudPath("bar"), relativeTo: URL(string: "foo/")!)!.absoluteString)
 
-		XCTAssertEqual("//bar", URL(cloudPath: CloudPath("/bar/"), relativeTo: URL(string: "foo")!)!.absoluteString)
-		XCTAssertEqual("//bar", URL(cloudPath: CloudPath("/bar"), relativeTo: URL(string: "foo")!)!.absoluteString)
-		XCTAssertEqual("//bar", URL(cloudPath: CloudPath("bar/"), relativeTo: URL(string: "foo")!)!.absoluteString)
-		XCTAssertEqual("//bar", URL(cloudPath: CloudPath("bar"), relativeTo: URL(string: "foo")!)!.absoluteString)
+		XCTAssertEqual("bar", URL(cloudPath: CloudPath("/bar/"), relativeTo: URL(string: "foo")!)!.absoluteString)
+		XCTAssertEqual("bar", URL(cloudPath: CloudPath("/bar"), relativeTo: URL(string: "foo")!)!.absoluteString)
+		XCTAssertEqual("bar", URL(cloudPath: CloudPath("bar/"), relativeTo: URL(string: "foo")!)!.absoluteString)
+		XCTAssertEqual("bar", URL(cloudPath: CloudPath("bar"), relativeTo: URL(string: "foo")!)!.absoluteString)
 
-		XCTAssertEqual("///foo/", URL(cloudPath: CloudPath("/"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
-		XCTAssertEqual("///", URL(cloudPath: CloudPath("/"), relativeTo: URL(string: "/foo")!)!.absoluteString)
-		XCTAssertEqual("//foo/", URL(cloudPath: CloudPath("/"), relativeTo: URL(string: "foo/")!)!.absoluteString)
-		XCTAssertEqual("//.", URL(cloudPath: CloudPath("/"), relativeTo: URL(string: "foo")!)!.absoluteString)
+		XCTAssertEqual("/foo/", URL(cloudPath: CloudPath("/"), relativeTo: URL(string: "/foo/")!)!.absoluteString)
+		XCTAssertEqual("/", URL(cloudPath: CloudPath("/"), relativeTo: URL(string: "/foo")!)!.absoluteString)
+		XCTAssertEqual("foo/", URL(cloudPath: CloudPath("/"), relativeTo: URL(string: "foo/")!)!.absoluteString)
+		XCTAssertEqual("", URL(cloudPath: CloudPath("/"), relativeTo: URL(string: "foo")!)!.absoluteString)
 
-		XCTAssertEqual("///foo", URL(cloudPath: CloudPath("/foo/"), relativeTo: URL(string: "/")!)!.absoluteString)
-		XCTAssertEqual("///foo", URL(cloudPath: CloudPath("/foo"), relativeTo: URL(string: "/")!)!.absoluteString)
-		XCTAssertEqual("///foo", URL(cloudPath: CloudPath("foo/"), relativeTo: URL(string: "/")!)!.absoluteString)
-		XCTAssertEqual("///foo", URL(cloudPath: CloudPath("foo"), relativeTo: URL(string: "/")!)!.absoluteString)
+		XCTAssertEqual("/foo", URL(cloudPath: CloudPath("/foo/"), relativeTo: URL(string: "/")!)!.absoluteString)
+		XCTAssertEqual("/foo", URL(cloudPath: CloudPath("/foo"), relativeTo: URL(string: "/")!)!.absoluteString)
+		XCTAssertEqual("/foo", URL(cloudPath: CloudPath("foo/"), relativeTo: URL(string: "/")!)!.absoluteString)
+		XCTAssertEqual("/foo", URL(cloudPath: CloudPath("foo"), relativeTo: URL(string: "/")!)!.absoluteString)
 	}
 
 	func testTrimmingLeadingCharacters() {
